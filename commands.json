@@ -1,0 +1,10 @@
+{
+  "sbatch": {
+    "en": "submits a job script to SLURM.",
+    "tr": "iş betiğini SLURM'e teslim etmek içindir."
+    },
+  "salloc": {
+    "en": "allocates nodes for interactive runs",
+    "tr": "interaktif çalismak için SLURM'den sunucu talep etmek içindir."
+  }
+}
