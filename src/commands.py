@@ -6,8 +6,6 @@ import locales
 import logging
 
 # To offer optional arguments
-import os
-import pathlib
 from argparse import ArgumentParser
 
 # To get the language of the user's default environment
@@ -19,14 +17,13 @@ from rich.table import Table
 from rich.style import Style
 from rich import box
 
-from pathlib import Path
 
 # To support multilingual text
 import gettext
 
 from time import perf_counter
 
-JSON_FILE_LOCATION = Path().resolve() / "commands.json"
+JSON_FILE_LOCATION = "/etc/lscmd/commands.json"
 
 
 def get_commands():
@@ -71,7 +68,7 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
     lang = args.language
-    translation = gettext.translation('base', localedir='locales', languages=[args.language])
+    translation = gettext.translation('lscmd',languages=[args.language])
     translation.install()
     _ = translation.gettext
     logger.debug("Locale language is " + system_lang + " and chosen language is: " + lang)
