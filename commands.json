@@ -1,10 +1,61 @@
-{
-  "sbatch": {
-    "en": "submits a job script to SLURM.",
-    "tr": "iş betiğini SLURM'e teslim etmek içindir."
+{ "lssrv": {
+    "en": "Shows the load and state of the partitions in clusters",
+    "tr": "Kümelerdeki kuyruk(partition) durumunu ve yükünü gösterir"
+  },
+  "sinfo": {
+    "en": "Displays the current information about the partitions.",
+    "tr": "İş kuyruklarının güncel durumunu gösterir."
+  },
+  "squeue": {
+    "en": "Displays the information about user's jobs that are currently running or partition.",
+    "tr": "Kullanıcının kuyrukta bekleyen ve çalışan işlerini görüntüler."
     },
+  "sbatch": {
+    "en": "Submits a job to the partition.",
+    "tr": "Hazırlanan iş betiğini kuyruğa göndermek için kullanılır."
+    },
+  "srun": {
+    "en": "Submits a job for execution in real time.",
+    "tr": "Hazırlanan işi gerçek zamanlı çalıştırılmak üzere kuyruğa gönderir."
+  },
   "salloc": {
-    "en": "allocates nodes for interactive runs",
-    "tr": "interaktif çalismak için SLURM'den sunucu talep etmek içindir."
+    "en": "Allocates nodes for interactive runs.",
+    "tr": "İnteraktif çalismak için SLURM'den sunucu talep etmek içindir."
+  },
+  "scancel": {
+    "en": "Cancels the user's jobs that are currently running or in partition.",
+    "tr": "Kuyrukta sırada bekleyen ya da o anda çalışmakta olan işleri iptal etmek için kullanılır."
+  },
+  "sacct": {
+    "en": "Gives detailed information about pending, working or previously worked and terminated jobs or a single job.",
+    "tr": "Beklemede, çalışmakta ya da daha önce çalışmış ve sonlanmış olan işler ya da tek bir iş hakkında ayrıntılı bilgi verir."
+  },
+  "sstat": {
+    "en": "Gives information about system resources that are used or currently being used by the running job.",
+    "tr": "Çalışmakta olan işin kullandığı, kullanmakta olduğu sistem kaynakları hakkında bilgi verir."
+  },
+  "module avail": {
+    "en": "Displays the available modules.",
+    "tr": "Kullanılabilir modülleri gösterir."
+  },
+  "module load": {
+    "en": "Loads the chosen module.",
+    "tr": "Seçilen module'ü yükler."
+  },
+  "module unload": {
+    "en": "Loads the chosen module.",
+    "tr": "Seçilen modülün yüklemesini kaldırır."
+  },
+  "module list": {
+    "en": "Displays currently loaded modules.",
+    "tr": "Yüklü modülleri gösterir."
+  },
+  "scp": {
+    "en": "Sends input and output files from TRUBA clusters to your computer.",
+    "tr": "Input ve output dosyalarınızı TRUBA kümelerinden kendi bilgisayarınıza göndermenizi sağlar."
+  },
+  "passwd": {
+    "en": "To change your password for TRUBA.",
+    "tr": "TRUBA şifrenizi değiştirmenizi sağlar."
   }
 }

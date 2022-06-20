@@ -20,8 +20,8 @@ msgstr ""
 #: main.py:76
 msgid ""
 "You can send mail to grid-teknik@ulakbim.gov.tr for you comments and "
-"suggestions"
-msgstr "Görüş ve önerileriniz için grid-teknik@ulakbim.gov.tr adresine mail atabilirsiniz"
+"suggestions."
+msgstr "Görüş ve önerileriniz için grid-teknik@ulakbim.gov.tr adresine mail atabilirsiniz."
 
 #: main.py:84
 msgid "TRUBA Commands"
