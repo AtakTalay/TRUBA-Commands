@@ -2,7 +2,6 @@
 import json
 
 # To write log messages
-import locales
 import logging
 
 # To offer optional arguments
@@ -62,13 +61,13 @@ if __name__ == "__main__":
 
     # gets the optional argument language to decide the final language to use
     parser = ArgumentParser()
-    parser.add_argument("-l", "--language", nargs="?", type=str,choices=["tr", "en"],
+    parser.add_argument("-l", "--language", nargs="?", type=str, choices=["tr", "en"],
                         default=system_lang, help="Selects the language")
-    parser.add_argument("-v", "--verbose",action="count", help = "Shows the running time")
+    parser.add_argument("-v", "--verbose", action="count", help="Shows the running time")
 
     args = parser.parse_args()
     lang = args.language
-    translation = gettext.translation('lscmd',languages=[args.language])
+    translation = gettext.translation('lscmd',localedir="/usr/local/share/locale", languages=[args.language])
     translation.install()
     _ = translation.gettext
     logger.debug("Locale language is " + system_lang + " and chosen language is: " + lang)
