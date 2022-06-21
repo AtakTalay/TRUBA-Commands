@@ -20,6 +20,7 @@ from rich import box
 # To support multilingual text
 import gettext
 
+# To find running time
 from time import perf_counter
 
 JSON_FILE_LOCATION = "/etc/lscmd/commands.json"
@@ -52,7 +53,10 @@ def get_system_language():
 
 
 if __name__ == "__main__":
+
+    # starts the time counter
     start = perf_counter()
+
     logging.basicConfig(filename=None, level=logging.ERROR)
 
     logger = logging.getLogger('main')
@@ -67,6 +71,8 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
     lang = args.language
+
+    # loads the selected language's language file lcmd.mo
     translation = gettext.translation('lscmd',localedir="/usr/local/share/locale", languages=[args.language])
     translation.install()
     _ = translation.gettext
@@ -85,6 +91,7 @@ if __name__ == "__main__":
     table.add_column(_("Explanation"), footer=footerMsg, footer_style=col2_footer_style)
 
     data = get_commands()
+    logger.debug("dictionary is created using the JSON file with size", len(data))
 
     # Adds commands with their explanations in final language
     for command in data:
@@ -98,6 +105,7 @@ if __name__ == "__main__":
     console = Console()
     console.print(table)
 
+    # ends the time counter and reports if asked
     end = perf_counter()
     if args.verbose:
         print("Time elapsed:", end - start)
