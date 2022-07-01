@@ -43,7 +43,7 @@
     "tr": "Seçilen module'ü yükler."
   },
   "module unload": {
-    "en": "Loads the chosen module.",
+    "en": "Unloads the chosen module.",
     "tr": "Seçilen modülün yüklemesini kaldırır."
   },
   "module list": {
